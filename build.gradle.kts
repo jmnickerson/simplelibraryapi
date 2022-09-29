@@ -23,6 +23,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("com.ninja-squad:springmockk:3.1.1")
 }
 
 tasks.withType<KotlinCompile> {
