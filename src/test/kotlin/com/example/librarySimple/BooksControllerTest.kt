@@ -21,7 +21,8 @@ class BooksControllerTest() {
         )
             .andExpect(MockMvcResultMatchers.status().isOk)
             .andExpect(
-                MockMvcResultMatchers.content().json("[{\"author\":\"J.R.R Tolkein\",\"title\":\"The Hobbit\"}]")
+                MockMvcResultMatchers.content()
+                    .json("[{\"author\":\"J.R.R Tolkein\",\"title\":\"The Hobbit\"}, {\"author\":\"C.S. Lewis\",\"title\":\"The Lion the Witch and the Wardrobe\"}]")
             )
     }
 }
