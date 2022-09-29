@@ -25,7 +25,7 @@ class BooksControllerTest() {
     lateinit var mockBookRepository: BookRepository
 
     @Test
-    fun `List articles`() {
+    fun `gets all books from repository`() {
 
         every { mockBookRepository.findAll()}.returns(listOf(Book(author = "J.R.R. Tolkein", title = "The Hobbit")))
 
