@@ -8,7 +8,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
 @WebMvcTest
-class BookTest() {
+class BooksControllerTest() {
 
     @Autowired
     lateinit var mockMvc: MockMvc
@@ -20,13 +20,8 @@ class BookTest() {
                 .get("/api/books")
         )
             .andExpect(MockMvcResultMatchers.status().isOk)
-//            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
-//            .andExpect(MockMvcResultMatchers.content().string("{}"))  .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(
                 MockMvcResultMatchers.content().json("[{\"author\":\"J.R.R Tolkein\",\"title\":\"The Hobbit\"}]")
             )
-//            .andExpect(jsonPath("\$.[0].slug").value(spring5Article.slug))
-//            .andExpect(jsonPath("\$.[1].author.login").value(juergen.login))
-//            .andExpect(jsonPath("\$.[1].slug").value(spring43Article.slug))
     }
 }
