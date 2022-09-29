@@ -13,14 +13,10 @@ import org.springframework.web.bind.annotation.RestController
 class BooksController(val bookRepository: BookRepository) {
 
     @GetMapping
-    fun getBooks(): List<Book> {
-        return bookRepository.findAll() as List<Book>
-    }
+    fun getBooks(): List<Book> = bookRepository.findAll() as List<Book>
 
     @PostMapping
-    fun addBook(book: Book): Book {
-        return bookRepository.save(book)
-    }
+    fun addBook(book: Book): Book = bookRepository.save(book)
 
     @GetMapping("/seed")
     fun seedBooks() {
