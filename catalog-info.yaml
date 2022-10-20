@@ -2,7 +2,6 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: simple-library-api
-  description: Tanzu Java Web App
   tags:
     - java
     - spring
@@ -13,4 +12,4 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: mccabe
+  owner: default-team
