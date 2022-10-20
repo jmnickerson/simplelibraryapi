@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController
 class BooksController {
 
     @GetMapping
-    fun getBooks(): List<Book> {
-        return listOf(Book(author = "J.R.R Tolkein", title = "The Hobbit"), Book(author = "C.S. Lewis", title = "The Lion the Witch and the Wardrobe"))
-    }
+    fun getBooks(): List<Book> = listOf(
+        Book(author = "J.R.R Tolkein", title = "The Hobbit"),
+        Book(author = "C.S. Lewis", title = "The Lion the Witch and the Wardrobe")
+    )
 }
