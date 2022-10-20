@@ -13,6 +13,7 @@ class BooksController {
     @GetMapping
     fun getBooks(): List<Book> = listOf(
         Book(author = "J.R.R Tolkein", title = "The Hobbit"),
-        Book(author = "C.S. Lewis", title = "The Lion the Witch and the Wardrobe")
+        Book(author = "C.S. Lewis", title = "The Lion the Witch and the Wardrobe"),
+        Book(author = "Kent Beck", title = "Extreme Programming Explained"),
     )
 }
