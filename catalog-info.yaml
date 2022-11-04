@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: simple-library-api
+  tags:
+    - java
+    - spring
+    - web
+    - tanzu
+  annotations:
+    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=mccabe-library-web-app"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
