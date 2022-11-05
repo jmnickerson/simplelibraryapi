@@ -1,0 +1,8 @@
+apiVersion: sql.tanzu.vmware.com/v1
+kind: Postgres
+metadata:
+  name: postgres-db
+  namespace: mccabe
+spec:
+  storageClassName: vc01cl01-t0compute
+  monitorStorageClassName: vc01cl01-t0compute

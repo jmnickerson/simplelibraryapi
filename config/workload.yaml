@@ -1,0 +1,32 @@
+---
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/part-of: mccabe-library-web-app
+    apps.tanzu.vmware.com/workload-type: web
+  name: mccabe-library-web-app
+  namespace: mccabe
+spec:
+  build:
+    env:
+      - name: BP_JVM_VERSION
+        value: "17"
+  params:
+    - name: annotations
+      value:
+        autoscaling.knative.dev/minScale: "1"
+  source:
+    git:
+      ref:
+        branch: main
+      url: https://github.com/jmnickerson/simplelibraryapi
+  serviceClaims:
+    - name: postgres
+      ref:
+        apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+        kind: ResourceClaim
+        name: postgres-db
+status:
+  supplyChainRef: {}
