@@ -6,6 +6,5 @@ spring:
     generate-ddl: true
     hibernate.ddl-auto: none
   datasource:
-    driverClassName: org.postgresql.Driver
+    driverClassName: org.h2.Driver
   flyway.enabled: true
-springdoc.api-docs.path: /api-docs
